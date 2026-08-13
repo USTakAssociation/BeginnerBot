@@ -72,7 +72,7 @@ Check each binary with `-help` for additional available flags (for example `-lim
 Example multi-stage `Dockerfile` to build `playtak` and produce a small runtime image:
 
 ```dockerfile
-FROM golang:1.20 AS builder
+FROM golang:1.26.5 AS builder
 WORKDIR /src
 COPY . .
 RUN CGO_ENABLED=0 GOOS=linux go build -o /out/playtak ./cmd/playtak

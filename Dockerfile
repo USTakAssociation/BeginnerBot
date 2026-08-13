@@ -1,4 +1,4 @@
-FROM golang:1.28.9 AS builder
+FROM golang:1.26.5 AS builder
 WORKDIR /src
 
 # If the repo has modules, download dependencies first to leverage layer caching
