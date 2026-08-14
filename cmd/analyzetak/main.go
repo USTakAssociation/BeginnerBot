@@ -8,12 +8,12 @@ import (
 	"runtime/pprof"
 	"time"
 
-	"golang.org/x/net/context"
+	"context"
 
-	"../../ai"
-	"../../cli"
-	"../../ptn"
-	"../../tak"
+	"beginnerbot/ai"
+	"beginnerbot/cli"
+	"beginnerbot/ptn"
+	"beginnerbot/tak"
 )
 
 var (

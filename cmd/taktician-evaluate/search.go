@@ -7,7 +7,7 @@ import (
 	"math/rand"
 	"reflect"
 
-	"../../ai"
+	"beginnerbot/ai"
 )
 
 type field struct {

@@ -7,7 +7,7 @@ import (
 	"path"
 	"strings"
 
-	"../ptn"
+	"beginnerbot/ptn"
 )
 
 func readPTNs(d string) ([]*ptn.PTN, error) {

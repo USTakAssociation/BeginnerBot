@@ -4,7 +4,7 @@ import (
 	"errors"
 	"regexp"
 
-	"../tak"
+	"beginnerbot/tak"
 )
 
 var moveRE = regexp.MustCompile(

@@ -6,7 +6,7 @@ import (
 	"strings"
 	"testing"
 
-	"../tak"
+	"beginnerbot/tak"
 )
 
 const testGame = `

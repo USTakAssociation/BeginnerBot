@@ -3,7 +3,7 @@ package tak
 import (
 	"errors"
 
-	"../bitboard"
+	"beginnerbot/bitboard"
 )
 
 type Config struct {

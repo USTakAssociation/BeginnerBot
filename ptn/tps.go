@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"strings"
 
-	"../tak"
+	"beginnerbot/tak"
 )
 
 func ParseTPS(tpn string) (*tak.Position, error) {

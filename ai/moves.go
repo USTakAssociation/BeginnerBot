@@ -3,7 +3,7 @@ package ai
 import (
 	"sort"
 
-	"../tak"
+	"beginnerbot/tak"
 )
 
 type moveGenerator struct {

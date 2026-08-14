@@ -7,10 +7,10 @@ import (
 	"sync"
 	"time"
 
-	"golang.org/x/net/context"
+	"context"
 
-	"../../ai"
-	"../../tak"
+	"beginnerbot/ai"
+	"beginnerbot/tak"
 )
 
 type Config struct {

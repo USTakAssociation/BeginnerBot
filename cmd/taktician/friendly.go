@@ -6,12 +6,12 @@ import (
 	"strconv"
 	"time"
 
-	"golang.org/x/net/context"
+	"context"
 
-	"../../ai"
-	"../../playtak"
-	"../../playtak/bot"
-	"../../tak"
+	"beginnerbot/ai"
+	"beginnerbot/playtak"
+	"beginnerbot/playtak/bot"
+	"beginnerbot/tak"
 )
 
 const (

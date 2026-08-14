@@ -4,11 +4,11 @@ import (
 	"flag"
 	"testing"
 
-	"golang.org/x/net/context"
+	"context"
 
-	"../ai"
-	"../ptn"
-	"../tak"
+	"beginnerbot/ai"
+	"beginnerbot/ptn"
+	"beginnerbot/tak"
 )
 
 var hashTests = flag.Bool("test-hash", false, "run hash collision tests")

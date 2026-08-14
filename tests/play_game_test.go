@@ -7,9 +7,9 @@ import (
 	"strconv"
 	"testing"
 
-	"../cli"
-	"../ptn"
-	"../tak"
+	"beginnerbot/cli"
+	"beginnerbot/ptn"
+	"beginnerbot/tak"
 )
 
 var games = flag.String("games", "", "Directory of .ptn files to self-check on")

@@ -4,11 +4,11 @@ import (
 	"flag"
 	"testing"
 
-	"golang.org/x/net/context"
+	"context"
 
-	"../ai"
-	"../ptn"
-	"../tak"
+	"beginnerbot/ai"
+	"beginnerbot/ptn"
+	"beginnerbot/tak"
 )
 
 var seed = flag.Int64("seed", 4, "random seed")

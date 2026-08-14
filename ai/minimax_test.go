@@ -5,10 +5,10 @@ import (
 	"testing"
 	"time"
 
-	"golang.org/x/net/context"
+	"context"
 
-	"../ptn"
-	"../tak"
+	"beginnerbot/ptn"
+	"beginnerbot/tak"
 )
 
 var size = flag.Int("size", 5, "board size to benchmark")

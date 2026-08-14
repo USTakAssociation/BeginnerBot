@@ -12,9 +12,9 @@ import (
 	"strings"
 	"time"
 
-	"../../playtak"
-	"../../ptn"
-	"../../tak"
+	"beginnerbot/playtak"
+	"beginnerbot/ptn"
+	"beginnerbot/tak"
 )
 
 var (

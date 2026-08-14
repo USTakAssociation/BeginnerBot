@@ -11,9 +11,9 @@ import (
 	"path"
 	"runtime/pprof"
 
-	"../../ai"
-	"../../ptn"
-	"../../tak"
+	"beginnerbot/ai"
+	"beginnerbot/ptn"
+	"beginnerbot/tak"
 )
 
 var (

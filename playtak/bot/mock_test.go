@@ -7,8 +7,8 @@ import (
 	"testing"
 	"time"
 
-	"../../tak"
-	"golang.org/x/net/context"
+	"beginnerbot/tak"
+	"context"
 )
 
 type Expectation struct {

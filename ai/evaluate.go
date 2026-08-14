@@ -5,8 +5,8 @@ import (
 	"io"
 	"text/tabwriter"
 
-	"../bitboard"
-	"../tak"
+	"beginnerbot/bitboard"
+	"beginnerbot/tak"
 )
 
 const (

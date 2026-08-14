@@ -4,7 +4,7 @@ import (
 	"reflect"
 	"testing"
 
-	"../tak"
+	"beginnerbot/tak"
 )
 
 func TestParseServer(t *testing.T) {

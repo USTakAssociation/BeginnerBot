@@ -9,11 +9,11 @@ import (
 	"sync/atomic"
 	"time"
 
-	"golang.org/x/net/context"
+	"context"
 
-	"../bitboard"
-	"../ptn"
-	"../tak"
+	"beginnerbot/bitboard"
+	"beginnerbot/ptn"
+	"beginnerbot/tak"
 )
 
 const (

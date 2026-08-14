@@ -3,9 +3,9 @@ package ai
 import (
 	"math/rand"
 
-	"golang.org/x/net/context"
+	"context"
 
-	"../tak"
+	"beginnerbot/tak"
 )
 
 type RandomAI struct {
