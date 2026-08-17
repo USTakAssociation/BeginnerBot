@@ -6,7 +6,7 @@ Install Golang (1.26+ recommended).
 
 There are several commands included under the `cmd` directory. All commands accept `-help` to list flags; common binaries are `cmd/playtak`, `cmd/taktician`, `cmd/taklogger`, and `cmd/analyzetak`.
 
-Below are quick examples for building, running, and containerizing the bot, and how to provide credentials and a PlayTak server URL.
+Below are quick examples for building, running, and containerizing the bot, and how to provide credentials and a PlayTak server address.
 
 ## Build and run locally (`cmd/playtak`)
 
@@ -43,7 +43,7 @@ go build -o bin/analyzetak ./cmd/analyzetak
 
 Some binaries accept server and credential flags to connect to a PlayTak server. Common flags:
 
-- `-server` : PlayTak server URL (e.g. `https://playtak.com`)
+- `-server` : PlayTak server address in `host:port` form (e.g. `playtak.com:10000`)
 - `-user` : bot username
 - `-pass` : bot password
 
@@ -53,14 +53,14 @@ Example: run `taktician` with a bot account and depth 4 minimax:
 
 ```bash
 go build -o bin/taktician ./cmd/taktician
-./bin/taktician -server=https://playtak.com -user=mybot -pass=secret -depth=4
+./bin/taktician -server=playtak.com:10000 -user=mybot -pass=secret -depth=4
 ```
 
 Example: run `taklogger` pointing at a custom server and write PTN output:
 
 ```bash
 go build -o bin/taklogger ./cmd/taklogger
-./bin/taklogger -server=https://playtak.com -out=/data/ptn
+./bin/taklogger -server=playtak.com:10000 -out=/data/ptn
 ```
 
 Check each binary with `-help` for additional available flags (for example `-limit`, `-sort`, or `-table` may be supported).
@@ -87,7 +87,7 @@ Build and run with Podman, passing `taktician`'s own flags (not `playtak`'s):
 
 ```bash
 podman build -t tak-bot:local .
-podman run --rm -it tak-bot:local -server=https://playtak.com -user=mybot -pass=secret -depth=4
+podman run --rm -it tak-bot:local -server=playtak.com:10000 -user=mybot -pass=secret -depth=4
 ```
 
 `taktician` connects to a PlayTak server and doesn't write files itself, so there's no PTN output to persist for this image. To build and run `playtak` or `taklogger` (which does support `-out`) in a container instead, write a separate Dockerfile targeting that command's `./cmd/...` path.
@@ -96,6 +96,6 @@ podman run --rm -it tak-bot:local -server=https://playtak.com -user=mybot -pass=
 
 - All CLI entrypoints accept `-help` to list supported flags. Use that to discover per-binary options such as `-depth`, `-limit`, `-debug`, etc.
 - Strength is controlled via the player string (`minimax:DEPTH`, `mcts:DURATION`). You can tune additional AI behavior by editing `ai/minimax.go` and `ai/mcts/mcts.go`.
-- The `-server`, `-user`, and `-pass` flags are used by the PlayTak-facing binaries (for example `cmd/taktician` and `cmd/taklogger`) to connect to the remote server. If you use a custom PlayTak instance, pass its URL via `-server`.
+- The `-server`, `-user`, and `-pass` flags are used by the PlayTak-facing binaries (for example `cmd/taktician` and `cmd/taklogger`) to connect to the remote server. If you use a custom PlayTak instance, pass its `host:port` address via `-server`.
 
 [tak]: http://cheapass.com/node/215
