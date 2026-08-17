@@ -11,7 +11,7 @@ import (
 	"strings"
 	"unicode"
 
-	"beginnerbot/tak"
+	"github.com/USTakAssociation/BeginnerBot/tak"
 )
 
 type Tag struct {

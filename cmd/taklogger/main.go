@@ -12,9 +12,9 @@ import (
 	"strings"
 	"time"
 
-	"beginnerbot/playtak"
-	"beginnerbot/ptn"
-	"beginnerbot/tak"
+	"github.com/USTakAssociation/BeginnerBot/playtak"
+	"github.com/USTakAssociation/BeginnerBot/ptn"
+	"github.com/USTakAssociation/BeginnerBot/tak"
 )
 
 var (

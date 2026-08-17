@@ -5,7 +5,7 @@ import (
 
 	"context"
 
-	"beginnerbot/tak"
+	"github.com/USTakAssociation/BeginnerBot/tak"
 )
 
 type RandomAI struct {

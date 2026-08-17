@@ -7,8 +7,8 @@ import (
 
 	"context"
 
-	"beginnerbot/ptn"
-	"beginnerbot/tak"
+	"github.com/USTakAssociation/BeginnerBot/ptn"
+	"github.com/USTakAssociation/BeginnerBot/tak"
 )
 
 var size = flag.Int("size", 5, "board size to benchmark")

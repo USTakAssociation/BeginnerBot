@@ -10,10 +10,10 @@ import (
 
 	"context"
 
-	"beginnerbot/ai"
-	"beginnerbot/cli"
-	"beginnerbot/ptn"
-	"beginnerbot/tak"
+	"github.com/USTakAssociation/BeginnerBot/ai"
+	"github.com/USTakAssociation/BeginnerBot/cli"
+	"github.com/USTakAssociation/BeginnerBot/ptn"
+	"github.com/USTakAssociation/BeginnerBot/tak"
 )
 
 var (

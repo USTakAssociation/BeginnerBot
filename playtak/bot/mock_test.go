@@ -7,7 +7,7 @@ import (
 	"testing"
 	"time"
 
-	"beginnerbot/tak"
+	"github.com/USTakAssociation/BeginnerBot/tak"
 	"context"
 )
 

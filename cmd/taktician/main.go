@@ -10,8 +10,8 @@ import (
 	"syscall"
 	"time"
 
-	"beginnerbot/playtak"
-	"beginnerbot/playtak/bot"
+	"github.com/USTakAssociation/BeginnerBot/playtak"
+	"github.com/USTakAssociation/BeginnerBot/playtak/bot"
 )
 
 var (

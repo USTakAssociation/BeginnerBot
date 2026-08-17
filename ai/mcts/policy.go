@@ -3,8 +3,8 @@ package mcts
 import (
 	"context"
 
-	"beginnerbot/ai"
-	"beginnerbot/tak"
+	"github.com/USTakAssociation/BeginnerBot/ai"
+	"github.com/USTakAssociation/BeginnerBot/tak"
 )
 
 func UniformRandomPolicy(ctx context.Context,

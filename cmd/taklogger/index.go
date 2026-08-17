@@ -12,7 +12,7 @@ import (
 
 	_ "github.com/mattn/go-sqlite3"
 
-	"beginnerbot/ptn"
+	"github.com/USTakAssociation/BeginnerBot/ptn"
 )
 
 const createGameTable = `

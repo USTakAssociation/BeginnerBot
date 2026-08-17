@@ -6,9 +6,9 @@ import (
 
 	"context"
 
-	"beginnerbot/ai"
-	"beginnerbot/ptn"
-	"beginnerbot/tak"
+	"github.com/USTakAssociation/BeginnerBot/ai"
+	"github.com/USTakAssociation/BeginnerBot/ptn"
+	"github.com/USTakAssociation/BeginnerBot/tak"
 )
 
 var hashTests = flag.Bool("test-hash", false, "run hash collision tests")

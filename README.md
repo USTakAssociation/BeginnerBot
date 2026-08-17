@@ -1,10 +1,6 @@
 # Installation
 
-Install Golang (1.18+ recommended).
-
-Place the contents of this package in a folder that is neither in the `GOROOT` or `GOPATH`.
-
-Install the `golang.org/x/net/context` package if your toolchain requires it.
+Install Golang (1.26+ recommended).
 
 # Programs
 
@@ -51,6 +47,8 @@ Some binaries accept server and credential flags to connect to a PlayTak server.
 - `-user` : bot username
 - `-pass` : bot password
 
+Note: `-pass` takes the password as a plain command-line argument, so it will be visible in your shell history and to other users via process listings (e.g. `ps`). There is currently no alternate input method (env var, prompt, or file); avoid using this flag with real credentials on shared or untrusted machines.
+
 Example: run `taktician` with a bot account and depth 4 minimax:
 
 ```bash
@@ -62,40 +60,37 @@ Example: run `taklogger` pointing at a custom server and write PTN output:
 
 ```bash
 go build -o bin/taklogger ./cmd/taklogger
-./bin/taklogger -server=https://playtak.com -out=/data/games.ptn
+./bin/taklogger -server=https://playtak.com -out=/data/ptn
 ```
 
 Check each binary with `-help` for additional available flags (for example `-limit`, `-sort`, or `-table` may be supported).
 
 ## Containerization (Podman / Docker)
 
-Example multi-stage `Dockerfile` to build `playtak` and produce a small runtime image:
+The checked-in `Dockerfile` builds `taktician` and sets it as the image entrypoint:
 
 ```dockerfile
 FROM golang:1.26.5 AS builder
 WORKDIR /src
+COPY go.mod go.sum* ./
+RUN go mod download
 COPY . .
-RUN CGO_ENABLED=0 GOOS=linux go build -o /out/playtak ./cmd/playtak
+RUN CGO_ENABLED=0 GOOS=linux go build -o /out/taktician ./cmd/taktician
 
-FROM alpine:3.18
-RUN apk add --no-cache ca-certificates
-COPY --from=builder /out/playtak /usr/local/bin/playtak
+FROM scratch
+COPY --from=builder /out/taktician /usr/local/bin/taktician
 WORKDIR /app
-ENTRYPOINT ["/usr/local/bin/playtak"]
+ENTRYPOINT ["/usr/local/bin/taktician"]
 ```
 
-Build and run with Podman:
+Build and run with Podman, passing `taktician`'s own flags (not `playtak`'s):
 
 ```bash
 podman build -t tak-bot:local .
-podman run --rm -it tak-bot:local -white=minimax:5 -black=rand -size=5
+podman run --rm -it tak-bot:local -server=https://playtak.com -user=mybot -pass=secret -depth=4
 ```
 
-To persist PTN output or provide data files, mount a host directory into the container:
-
-```bash
-podman run --rm -it -v $(pwd)/data:/data tak-bot:local -white=minimax:5 -black=rand -size=5 -out /data/game.ptn
-```
+`taktician` connects to a PlayTak server and doesn't write files itself, so there's no PTN output to persist for this image. To build and run `playtak` or `taklogger` (which does support `-out`) in a container instead, write a separate Dockerfile targeting that command's `./cmd/...` path.
 
 ## Notes and tips
 

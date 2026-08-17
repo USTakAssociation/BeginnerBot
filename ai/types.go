@@ -1,7 +1,7 @@
 package ai
 
 import (
-	"beginnerbot/tak"
+	"github.com/USTakAssociation/BeginnerBot/tak"
 	"context"
 )
 

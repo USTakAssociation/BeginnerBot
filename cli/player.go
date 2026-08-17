@@ -6,8 +6,8 @@ import (
 	"io"
 	"strings"
 
-	"beginnerbot/ptn"
-	"beginnerbot/tak"
+	"github.com/USTakAssociation/BeginnerBot/ptn"
+	"github.com/USTakAssociation/BeginnerBot/tak"
 )
 
 func NewCLIPlayer(out io.Writer, in *bufio.Reader) Player {

@@ -4,7 +4,7 @@ import (
 	"reflect"
 	"testing"
 
-	"beginnerbot/tak"
+	"github.com/USTakAssociation/BeginnerBot/tak"
 )
 
 func TestParseTPS(t *testing.T) {

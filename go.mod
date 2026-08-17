@@ -1,5 +1,5 @@
-module beginnerbot
+module github.com/USTakAssociation/BeginnerBot
 
 go 1.26
 
-require github.com/mattn/go-sqlite3 v1.14.49 // indirect
+require github.com/mattn/go-sqlite3 v1.14.49
