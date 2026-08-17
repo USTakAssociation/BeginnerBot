@@ -5,8 +5,8 @@ import (
 	"io"
 	"text/tabwriter"
 
-	"../bitboard"
-	"../tak"
+	"github.com/USTakAssociation/BeginnerBot/bitboard"
+	"github.com/USTakAssociation/BeginnerBot/tak"
 )
 
 const (

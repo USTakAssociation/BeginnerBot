@@ -4,7 +4,7 @@ import (
 	"errors"
 	"regexp"
 
-	"../tak"
+	"github.com/USTakAssociation/BeginnerBot/tak"
 )
 
 var moveRE = regexp.MustCompile(

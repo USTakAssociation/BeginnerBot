@@ -5,8 +5,8 @@ import (
 	"io"
 	"text/tabwriter"
 
-	"../ptn"
-	"../tak"
+	"github.com/USTakAssociation/BeginnerBot/ptn"
+	"github.com/USTakAssociation/BeginnerBot/tak"
 )
 
 type Player interface {

@@ -1,10 +1,10 @@
 package mcts
 
 import (
-	"golang.org/x/net/context"
+	"context"
 
-	"../../ai"
-	"../../tak"
+	"github.com/USTakAssociation/BeginnerBot/ai"
+	"github.com/USTakAssociation/BeginnerBot/tak"
 )
 
 func UniformRandomPolicy(ctx context.Context,

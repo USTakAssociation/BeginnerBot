@@ -6,7 +6,7 @@ import (
 	"strings"
 	"testing"
 
-	"../tak"
+	"github.com/USTakAssociation/BeginnerBot/tak"
 )
 
 const testGame = `
@@ -114,10 +114,10 @@ func TestRoundTripPTN(t *testing.T) {
 		t.Fatal("tags did not round-trip")
 	}
 	for _, o := range ptn.Ops {
-		o.(Op).clearSrc()
+		o.clearSrc()
 	}
 	for _, o := range back.Ops {
-		o.(Op).clearSrc()
+		o.clearSrc()
 	}
 	if !reflect.DeepEqual(ptn.Ops, back.Ops) {
 		t.Fatalf("different ops! in=%#v, out=%#v",

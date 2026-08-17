@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"strings"
 
-	"../tak"
+	"github.com/USTakAssociation/BeginnerBot/tak"
 )
 
 func ParseTPS(tpn string) (*tak.Position, error) {

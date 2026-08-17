@@ -10,13 +10,13 @@ import (
 	"strings"
 	"time"
 
-	"golang.org/x/net/context"
+	"context"
 
-	"../../ai"
-	"../../ai/mcts"
-	"../../cli"
-	"../../ptn"
-	"../../tak"
+	"github.com/USTakAssociation/BeginnerBot/ai"
+	"github.com/USTakAssociation/BeginnerBot/ai/mcts"
+	"github.com/USTakAssociation/BeginnerBot/cli"
+	"github.com/USTakAssociation/BeginnerBot/ptn"
+	"github.com/USTakAssociation/BeginnerBot/tak"
 )
 
 var (
